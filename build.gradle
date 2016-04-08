@@ -13,6 +13,6 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 //    compile 'com.github.djun100:UtilDeskTop:439c1f41909a6a2d2b882cbfee61e6e7aa0f41e1'
-    compile 'com.github.djun100:UtilDeskTop:9081e9773a472df6adc957367a9d55ba1f67a732'
+    compile 'com.github.djun100:UtilDeskTop:9910274217dcfec2dd7f01dab7efd76d421e299b'
     compile 'ru.lanwen.verbalregex:java-verbal-expressions:1.4'
 }
