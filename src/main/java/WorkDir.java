@@ -92,9 +92,13 @@ public class WorkDir {
 
     /**是否是Android studio项目*/
     public static boolean isASProject(String path){
-        if (new File(path+"/gradle").exists()){
-            System.out.println(path+"/gradle 存在");
+        path=path+"\\build.gradle";
+        if (new File(path).exists()){
+            System.out.println(path+" 存在");
             return true;
-        }else return false;
+        }else{
+            System.out.println(path+" 不存在");
+            return false;
+        }
     }
 }
