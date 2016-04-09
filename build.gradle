@@ -2,7 +2,7 @@ group 'cy.com'
 version '0.1'
 
 apply plugin: 'java'
-
+apply plugin: 'com.github.johnrengelman.shadow'
 sourceCompatibility = 1.5
 
 repositories {
@@ -10,7 +10,22 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+    }
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.github.djun100:UtilDeskTop:9910274217dcfec2dd7f01dab7efd76d421e299b'
+}
+shadowJar {
+    jar {
+        manifest {
+            attributes 'Main-Class': 'WorkDir'
+        }
+    }
 }
