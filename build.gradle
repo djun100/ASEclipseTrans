@@ -3,7 +3,7 @@ version '0.1'
 
 apply plugin: 'java'
 apply plugin: 'com.github.johnrengelman.shadow'
-sourceCompatibility = 1.5
+sourceCompatibility = 1.7
 
 repositories {
     mavenCentral()
@@ -20,12 +20,12 @@ buildscript {
 }
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'com.github.djun100:UtilDeskTop:9910274217dcfec2dd7f01dab7efd76d421e299b'
+    compile 'com.github.djun100:UtilDeskTop:f4eddba8d3bf138ffa22104a562ede56f4a452f6'
 }
 shadowJar {
     jar {
         manifest {
-            attributes 'Main-Class': 'WorkDir'
+            attributes 'Main-Class': 'com.cy.WorkDir.WorkDir'
         }
     }
 }

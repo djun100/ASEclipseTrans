@@ -1,3 +1,8 @@
+package com.cy.WorkDir;
+
+import com.cy.util.PropertyHelper;
+import com.cy.util.UtilFile;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -24,9 +29,9 @@ public class WorkDir {
     public static final String KEY_DEST_PATH ="KEY_DEST_PATH";
 
     public static void main(String[] args) {
-        srcProjectPath=PropertyHelper.getValue(KEY_SRC_PATH,true);
+        srcProjectPath= PropertyHelper.getValue(KEY_SRC_PATH,true);
         System.out.println("取到"+ KEY_SRC_PATH +" "+srcProjectPath);
-        destProjectPath=PropertyHelper.getValue(KEY_DEST_PATH,true);
+        destProjectPath= PropertyHelper.getValue(KEY_DEST_PATH,true);
         System.out.println("取到"+ KEY_DEST_PATH +" "+destProjectPath);
 
         try {
