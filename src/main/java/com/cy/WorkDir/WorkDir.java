@@ -13,11 +13,13 @@ public class WorkDir {
     /**定位到moudle名*/
     public static final String PATH_AS_SRC="\\src\\main\\java";
     public static final String PATH_AS_RES="\\src\\main\\res";
+    public static final String PATH_AS_ASSETS="\\src\\main\\assets";
     public static final String PATH_AS_JNILIBS="\\src\\main\\jniLibs";
     public static final String PATH_AS_LIBS="\\libs";
     public static final String PATH_AS_MANIFEST="\\src\\main\\AndroidManifest.xml";
 
     public static final String PATH_ECLIP_SRC="\\src";
+    public static final String PATH_ECLIP_ASSETS="\\assets";
     public static final String PATH_ECLIP_RES="\\res";
     public static final String PATH_ECLIP_JNILIBS="\\libs";
     public static final String PATH_ECLIP_LIBS="\\libs";
@@ -50,6 +52,9 @@ public class WorkDir {
             //复制res
             UtilFile.deleteDirectory(destProjectPath+PATH_ECLIP_RES);
             UtilFile.copyFolder(new File(srcProjectPath+PATH_AS_RES),new File(destProjectPath+PATH_ECLIP_RES));
+            //复制assets
+            UtilFile.deleteDirectory(destProjectPath+PATH_ECLIP_ASSETS);
+            UtilFile.copyFolder(new File(srcProjectPath+PATH_AS_ASSETS),new File(destProjectPath+PATH_ECLIP_ASSETS));
             //复制jnilibs
             UtilFile.deleteDirectory(destProjectPath+PATH_ECLIP_JNILIBS);
             UtilFile.copyFolder(new File(srcProjectPath+PATH_AS_JNILIBS),new File(destProjectPath+PATH_ECLIP_JNILIBS));
@@ -66,6 +71,9 @@ public class WorkDir {
             //复制res
             UtilFile.deleteDirectory(destProjectPath+PATH_AS_RES);
             UtilFile.copyFolder(new File(srcProjectPath+PATH_ECLIP_RES),new File(destProjectPath+PATH_AS_RES));
+            //复制assets
+            UtilFile.deleteDirectory(destProjectPath+PATH_AS_ASSETS);
+            UtilFile.copyFolder(new File(srcProjectPath+PATH_ECLIP_ASSETS),new File(destProjectPath+PATH_AS_ASSETS));
             //复制jnilibs
             UtilFile.deleteDirectory(destProjectPath+PATH_AS_JNILIBS);
             UtilFile.copyFolder(new File(srcProjectPath+PATH_ECLIP_JNILIBS),new File(destProjectPath+PATH_AS_JNILIBS));
